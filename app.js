@@ -5,8 +5,18 @@ const fromEuroToDollar = function(valueInEuro){
     //return the dollar value
     return valueInDollar;
 }
-
-
+const fromDollarToYen = function(valueInDollar){
+    // convert the given valueInDollar to Yen
+    let valueInYen = (valueInDollar/1.2) * 127.9;
+    //return the Yen value
+    return valueInYen;
+}
+const fromYenToPound = function(valueInYen){
+    // convert the given valueInYen to Pound
+    let valueInPound = (valueInYen/127.9) * 0.8;
+    //return the Pound value
+    return valueInPound;
+}
 // this is my function that sums two numbers
 const sum = (a,b) => {
     return a + b
@@ -17,4 +27,4 @@ console.log(sum(7,3))
 
 // export the function to be used on other files 
 // (similar to the keyword `export` when using webpack)
-module.exports = { sum, fromEuroToDollar };
+module.exports = { sum, fromEuroToDollar, fromDollarToYen, fromYenToPound };
